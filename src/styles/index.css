@@ -21,3 +21,8 @@
   .white{
     font-weight: bold;
   }
+  .ringcontainer{
+    display: flex;
+    justify-content: center;
+    
+  }

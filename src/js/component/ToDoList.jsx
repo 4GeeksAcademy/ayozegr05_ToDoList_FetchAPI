@@ -26,7 +26,7 @@ export const ToDoList = () => {
   useEffect(() => {
     setTimeout(() => {
       fetchPost();
-    }, 1000);
+    }, 1500);
   }, []);
 
   const handleInputChange = (event) => {
@@ -94,7 +94,10 @@ export const ToDoList = () => {
                 <li className="d-flex border-top text-secondary list-group-item white">{totalTasks} Items in the list</li>
               </div> 
               {posts.length === 0 ? (
-                <ColorRing />
+                <div className="ringcontainer">
+                  <ColorRing />
+                </div>
+
               ) : (
                 posts.map((post) => (
                   <li className="list-group-item" key={post.id}>
