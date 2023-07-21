@@ -108,13 +108,14 @@ export const ToDoList = () => {
                             post.completed ? "text-success pe-4 taskText completed" : "text-danger pe-4"
                           }
                         >
-                          {post.id}. {post.title}<i className="fas fa-check text-success ms-2"></i>
+                          {post.id}. {post.title}
                         </span>
                       </div>
                       <div>
                       {post.completed ? (
                           <span onClick={() => handleRemoveTask(post.id)}>
                           <i className="fas fa-times text-danger"></i>
+                          <i className="fas fa-check text-success ms-2"></i>
                           </span>
                         ) : (
                           <span onClick={() => toggleComplete(post.id)}>
